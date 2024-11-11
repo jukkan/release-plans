@@ -1,0 +1,20 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content | markdownify }}
+    </div>
+      <!-- Full-width container for the Power BI report -->
+  <div style="width: 100vw; margin-left: calc((100% - 100vw) / 2); margin-bottom: 40px;">
+    <iframe
+      title="Release-Planner - Wkes v2"
+      src="https://app.powerbi.com/view?r=eyJrIjoiNjlhZDYwMmEtYTUwMS00ZWZhLTg0YTEtNDQ1ZmUwNDU3YjcyIiwidCI6ImFjMTAyZDUxLWFiY2ItNDZjMy1hNzk3LTVmOGE5ZDkxYTgxMyIsImMiOjh9"
+      frameborder="0"
+      allowFullScreen="true"
+      style="width: 100%; max-width: 1200px; height: 800px; margin: 0 auto; display: block;">
+    </iframe>
+  </div>
+</article>
+{{- end -}}
