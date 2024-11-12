@@ -2,36 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Release Plans Visualized</title>
-    <link>https://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Release Plans Visualized</description>
     <image>
       <title>Release Plans Visualized</title>
-      <url>https://example.org/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://example.org/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.137.0</generator>
     <language>en-us</language>
     <copyright>Developed by Niiranen Advisory Oy</copyright>
     <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👋 About this site</title>
-      <link>https://example.org/posts/about/</link>
+      <link>http://localhost:1313/posts/about/</link>
       <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/about/</guid>
+      <guid>http://localhost:1313/posts/about/</guid>
       <description>&lt;p&gt;Have you ever struggled to find the right release items for Microsoft Power Platform and Microsoft Dynamics 365 products when using the &lt;a href=&#34;https://releaseplans.microsoft.com/&#34;&gt;official Release Planner website&lt;/a&gt;?&lt;/p&gt;
 &lt;p&gt;Did you ever get frustrated when Microsoft decided to categorize the release items in a non-intuitive way?&lt;/p&gt;
 &lt;p&gt;Ever wished there was a quick way to see the most recently updated items on the release plans?&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Yes! Yes! And, yes!&lt;/em&gt;🙌&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Release Planner website: no results found&#34; loading=&#34;lazy&#34; src=&#34;https://example.org/images/Release%20Planner%20no%20results%20found.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;Release Planner website: no results found&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Release%20Planner%20no%20results%20found.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello world</title>
-      <link>https://example.org/posts/hello-world/</link>
+      <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/hello-world/</guid>
-      <description>&lt;p&gt;We have deployed a Hugo website! Well, I have, at least.&lt;/p&gt;
-&lt;p&gt;Since I figured it might be useful to have the ability to post updates here about changes to the Release Plans Visualized report, I wanted to have a lightweight, static website with a posts feature. I ended up installing &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and picking the &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;PaperMod template&lt;/a&gt;.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;We have deployed a Hugo website!🚀 Well, I have, at least.&lt;/p&gt;
+&lt;p&gt;Since I figured it might be useful to have the ability to post updates here about changes to the Release Plans Visualized report, I wanted to have a lightweight, static website with a posts feature. I ended up installing &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; and picking the &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;PaperMod template&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;After some trial error, lots of discussion with ChatGPT and some Git struggles, I was able to get a seemingly working site pushed to my GitHub repo. Finally, I used Netlify to get the site publicly visible for all of you to access. The following video tutorial is a good reference in case you want to follow the same path as I did:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

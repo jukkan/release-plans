@@ -43,6 +43,6 @@ I had earlier seen how MVP Loryan Strant had published his [Microsoft 365 Roadma
 
 So, I registered the domain releaseplans.net domain. Then, after some trial and error, I managed to get my very first Hugo based website up and running. And here you are now!💪
 
-You're free to bookmark this site and access it for an online copy of the Release Plans report, refreshed on a daily basis. Alternatively, if you want to download your own .pbix copy of it, it's available on GitHub.
+You're free to bookmark this site and access it for an online copy of the Release Plans report, refreshed on a daily basis. Alternatively, if you want to download your own .pbix copy of it, it's available on [GitHub](https://github.com/jukkan/release-plans).
 
-
+If you spot any errors or come across ideas on how you'd improve the report, feel free to open a GitHub issue and I'll take a look at it!

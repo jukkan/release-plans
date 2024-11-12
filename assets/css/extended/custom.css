@@ -1,0 +1,15 @@
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between icons as needed */
+    height: 26px;
+    width: 26px;
+  }
+  
+  .footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    height: 26px;
+    width: 26px;
+  }
+  
