@@ -20,18 +20,18 @@ Those answers were what drove me to explore alternative ways to access and prese
 
 ## Discovering the Release Planner API
 
-While Microsoft doesn't show it in their website UI, there is actually a documented data feed to access the Release Planner content. You just have to dsicover it from the "What's New" PDF deck of the website.🧐
+While Microsoft doesn't show it in their website UI, there is actually a documented data feed to access the Release Planner content. You just have to discover it from the "What's New" PDF deck of the website.🧐
 
 ![Release Plans API](/images/Release%20Plans%20API.png)
 
-The feed we get from https://releaseplans.microsoft.com/en-US/allreleaseplans/ contains almost all of the information needed for repliciating the Release Planner site in another format. To make it as easy as possible to work with the data, let's push the feed into Power BI:
+The feed we get from https://releaseplans.microsoft.com/en-US/allreleaseplans/ contains almost all of the information needed for replicating the Release Planner site in another format. To make it as easy as possible to work with the data, let's push the feed into Power BI:
 
 ![Release Plans data in Power BI table](/images/Release%20Plans%20data.png)
 
 
 ## Making it pretty
 
-Originally I created just a quick & dirty version of the report for my own use, with basic table and slicer visualizations that allowed me to filter and browse the release item list. I [posted about it on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7257024372027101185/) during the 2024 Wave 2 launch event. Then a community member reached out:
+Originally, I created just a quick & dirty version of the report for my own use, with basic table and slicer visualizations that allowed me to filter and browse the release item list. I [posted about it on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7257024372027101185/) during the 2024 Wave 2 launch event. Then a community member reached out:
 
 ![LinkedIn post about Release Planner Power BI report](/images/Release%20Planner%20pbix.png)
 
