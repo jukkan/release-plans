@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.137.0</generator>
     <language>en-us</language>
     <copyright>Developed by Niiranen Advisory Oy</copyright>
-    <lastBuildDate>Tue, 12 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Links to Microsoft product release information</title>
@@ -25,7 +25,9 @@
 &lt;h2 id=&#34;microsoft-fabric&#34;&gt;Microsoft Fabric&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/fabric/release-plan/overview&#34;&gt;Fabric release plan&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;microsoft-365&#34;&gt;Microsoft 365&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/microsoft-365/roadmap&#34;&gt;Microsoft 365 roadmap&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/microsoft-365/roadmap&#34;&gt;Microsoft 365 roadmap&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;azure&#34;&gt;Azure&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://azurecharts.com/updates&#34;&gt;Latest Azure Updates&lt;/a&gt; on azurecharts.com.&lt;/p&gt;</description>
     </item>
     <item>
       <title>👋 About this site</title>
@@ -37,6 +39,14 @@
 &lt;p&gt;Ever wished there was a quick way to see the most recently updated items on the release plans?&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Yes! Yes! And, yes!&lt;/em&gt;🙌&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Release Planner website: no results found&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/Release%20Planner%20no%20results%20found.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>No single source of truth</title>
+      <link>http://localhost:1313/posts/source-of-truth/</link>
+      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/source-of-truth/</guid>
+      <description>&lt;p&gt;Before there was the Release Planner website, Microsoft published all their Power Platform and Dynamics 365 release plans on MS Learn. They &lt;a href=&#34;https://learn.microsoft.com/en-us/dynamics365/release-plans/&#34;&gt;still do that&lt;/a&gt;. What this means in practice is that there is no single authoritative source for release plan item data.&lt;/p&gt;
+&lt;p&gt;One very nice feature of the MS Learn based release plan documentation is the change history pages for each plan. As an example, for 2024 release wave 2 we can see &lt;a href=&#34;https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave2/change-history&#34;&gt;changes&lt;/a&gt; like this:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello world</title>
