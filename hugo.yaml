@@ -15,8 +15,8 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: ExampleSite
-  description: "ExampleSite description"
+  title: "Release Plans Visualized"
+  description: "Microsoft Power Platform & Dynamics 365 release plan items summarized in a Power BI report."
   keywords: [Microsoft, Power Platform]
   author: Jukka Niiranen
   images: ["<link or path of image for opengraph, twitter-cards>"]
