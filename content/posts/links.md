@@ -1,7 +1,7 @@
 ---
 title: "Links to Microsoft product release information"
-date: 2024-11-12
-draft: true
+date: 2025-01-24
+draft: false
 weight: 1
 ---
 
@@ -9,7 +9,9 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 ## Power Platform
 
-[2024 release wave 2 (Current)](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave2/)
+[2025 release wave 1 (coming)](https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/)
+
+[2024 release wave 2 (current)](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave2/)
 
 [2024 release wave 1](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave1/)
 
@@ -28,7 +30,9 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 ## Dynamics 365
 
-[2024 release wave 2 (Current)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2024wave2/)
+[2025 release wave 1 (coming)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2025wave1/)
+
+[2024 release wave 2 (current)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2024wave2/)
 
 [2024 release wave 1](https://learn.microsoft.com/en-us/dynamics365/release-plan/2024wave1/)
 

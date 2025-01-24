@@ -118,6 +118,10 @@ menu:
       name: news
       url: /posts/
       weight: 20
+    - identifier: links
+      name: links
+      url: /posts/links
+      weight: 10
     - identifier: newsletter
       name: perspectives.plus
       url: https://perspectives.plus
