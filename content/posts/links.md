@@ -9,9 +9,9 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 ## Power Platform
 
-[2025 release wave 1 (coming)](https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/)
+[2025 release wave 1 (current)](https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/)
 
-[2024 release wave 2 (current)](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave2/)
+[2024 release wave 2 (previous)](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave2/)
 
 [2024 release wave 1](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave1/)
 
@@ -30,9 +30,9 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 ## Dynamics 365
 
-[2025 release wave 1 (coming)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2025wave1/)
+[2025 release wave 1 (current)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2025wave1/)
 
-[2024 release wave 2 (current)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2024wave2/)
+[2024 release wave 2 (previous)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2024wave2/)
 
 [2024 release wave 1](https://learn.microsoft.com/en-us/dynamics365/release-plan/2024wave1/)
 
@@ -42,7 +42,7 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 ## Microsoft Fabric
 
-[Fabric release plan](https://learn.microsoft.com/en-us/fabric/release-plan/overview)
+[Fabric roadmap](https://roadmap.fabric.microsoft.com/)
 
 [What's new in Power BI?](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-latest-update?tabs=powerbi-desktop)
 
