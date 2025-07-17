@@ -9,6 +9,8 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 ## Power Platform
 
+[2025 release wave 2 (coming)](https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave2/)
+
 [2025 release wave 1 (current)](https://learn.microsoft.com/en-us/power-platform/release-plan/2025wave1/)
 
 [2024 release wave 2 (previous)](https://learn.microsoft.com/en-us/power-platform/release-plan/2024wave2/)
@@ -29,6 +31,8 @@ While the scope of this site is Power Platform and Dynamics 365, professionals w
 
 
 ## Dynamics 365
+
+[2025 release wave 2 (coming)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2025wave2/)
 
 [2025 release wave 1 (current)](https://learn.microsoft.com/en-us/dynamics365/release-plan/2025wave1/)
 
