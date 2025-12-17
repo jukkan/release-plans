@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import prisma from '../config/database.js';
 import config from '../config/index.js';
+import authMiddleware from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -74,16 +75,28 @@ router.post('/logout', (req, res) => {
 /**
  * GET /api/auth/me
  * Get current user information
- * TODO: Add auth middleware
+ * Requires authentication
  */
-router.get('/me', async (req, res, next) => {
+router.get('/me', authMiddleware, async (req, res, next) => {
   try {
-    // TODO: Extract user from JWT token using auth middleware
-    // This endpoint requires authentication to be implemented
-    res.status(501).json({ 
-      error: 'Not Implemented',
-      message: 'Authentication middleware not yet implemented' 
+    // User info is attached by auth middleware
+    const user = await prisma.user.findUnique({
+      where: { id: req.user.userId },
+      select: {
+        id: true,
+        email: true,
+        name: true,
+        role: true,
+        createdAt: true,
+        lastLogin: true
+      }
     });
+    
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    
+    res.json({ user });
   } catch (error) {
     next(error);
   }
