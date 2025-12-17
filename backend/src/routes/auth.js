@@ -79,7 +79,11 @@ router.post('/logout', (req, res) => {
 router.get('/me', async (req, res, next) => {
   try {
     // TODO: Extract user from JWT token using auth middleware
-    res.json({ message: 'User info endpoint - TODO: implement auth middleware' });
+    // This endpoint requires authentication to be implemented
+    res.status(501).json({ 
+      error: 'Not Implemented',
+      message: 'Authentication middleware not yet implemented' 
+    });
   } catch (error) {
     next(error);
   }

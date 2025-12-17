@@ -1,4 +1,5 @@
 import { clsx } from 'clsx';
+import { format as dateFnsFormat, parseISO } from 'date-fns';
 
 /**
  * Utility function for combining class names
@@ -18,13 +19,13 @@ export function cn(...inputs) {
 export function formatDate(date, format = 'MMM d, yyyy') {
   if (!date) return '';
   
-  // TODO: Use date-fns for proper formatting
-  const d = new Date(date);
-  return d.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  });
+  try {
+    const dateObj = typeof date === 'string' ? parseISO(date) : date;
+    return dateFnsFormat(dateObj, format);
+  } catch (error) {
+    console.error('Error formatting date:', error);
+    return String(date);
+  }
 }
 
 /**

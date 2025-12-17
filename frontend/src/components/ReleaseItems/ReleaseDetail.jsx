@@ -89,10 +89,16 @@ function ReleaseDetail({ release }) {
       {release.geographicAreas && (
         <div>
           <h2 className="text-xl font-semibold text-gray-900 mb-3">Geographic Areas</h2>
-          <p className="text-gray-700">
-            {/* TODO: Format JSON geographic areas data */}
-            {JSON.stringify(release.geographicAreas)}
-          </p>
+          <div className="flex flex-wrap gap-2">
+            {Array.isArray(release.geographicAreas) 
+              ? release.geographicAreas.map((area, idx) => (
+                  <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                    {typeof area === 'string' ? area : area.name || JSON.stringify(area)}
+                  </span>
+                ))
+              : <p className="text-gray-700">{String(release.geographicAreas)}</p>
+            }
+          </div>
         </div>
       )}
     </div>

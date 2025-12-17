@@ -54,7 +54,8 @@ router.get('/content', async (req, res, next) => {
 router.post('/content', async (req, res, next) => {
   try {
     // TODO: Add auth middleware
-    // TODO: Add validation middleware
+    // TODO: Add validation middleware - sanitize and validate req.body before database insertion
+    // SECURITY: Direct use of req.body is a temporary stub. Must add proper validation before production.
     const page = await prisma.contentPage.create({
       data: req.body
     });
@@ -73,8 +74,15 @@ router.put('/content/:id', async (req, res, next) => {
     // TODO: Add auth middleware
     // TODO: Add validation middleware
     const { id } = req.params;
+    const pageId = parseInt(id, 10);
+    
+    if (isNaN(pageId)) {
+      return res.status(400).json({ error: 'Invalid page ID' });
+    }
+    
+    // TODO: Use validation middleware to sanitize req.body
     const page = await prisma.contentPage.update({
-      where: { id: parseInt(id) },
+      where: { id: pageId },
       data: req.body
     });
     res.json({ data: page });
@@ -91,8 +99,14 @@ router.delete('/content/:id', async (req, res, next) => {
   try {
     // TODO: Add auth middleware
     const { id } = req.params;
+    const pageId = parseInt(id, 10);
+    
+    if (isNaN(pageId)) {
+      return res.status(400).json({ error: 'Invalid page ID' });
+    }
+    
     await prisma.contentPage.delete({
-      where: { id: parseInt(id) }
+      where: { id: pageId }
     });
     res.status(204).send();
   } catch (error) {
