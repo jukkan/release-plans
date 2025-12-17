@@ -80,6 +80,40 @@ export function validateParams(schema) {
   };
 }
 
+// Release query validation schema
+const releaseQuerySchema = Joi.object({
+  page: Joi.number().integer().min(1).default(1),
+  limit: Joi.number().integer().min(1).max(100).default(50),
+  products: Joi.string().allow(''),
+  investmentAreas: Joi.string().allow(''),
+  search: Joi.string().allow('').max(200),
+  gaDateFrom: Joi.date().iso(),
+  gaDateTo: Joi.date().iso(),
+  releaseWave: Joi.string().allow(''),
+  sortBy: Joi.string().valid('gaDate', 'productName', 'featureName', 'lastUpdated').default('gaDate'),
+  sortOrder: Joi.string().valid('asc', 'desc').default('desc'),
+});
+
+/**
+ * Validate release query parameters
+ */
+export function validateReleaseQuery(req, res, next) {
+  const { error, value } = releaseQuerySchema.validate(req.query, {
+    abortEarly: false,
+    stripUnknown: true,
+  });
+
+  if (error) {
+    return res.status(400).json({
+      error: 'Validation failed',
+      details: error.details.map(d => ({ field: d.path.join('.'), message: d.message })),
+    });
+  }
+
+  req.query = value;
+  next();
+}
+
 // Common validation schemas
 export const schemas = {
   // Login schema
