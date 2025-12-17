@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model ReleaseItem {
+  id                    String    @id @db.VarChar(255)
+  productId             String?   @map("product_id") @db.VarChar(100)
+  productName           String    @map("product_name") @db.VarChar(255)
+  productNameShort      String    @map("product_name_short") @db.VarChar(255)
+  featureName           String    @map("feature_name") @db.Text
+  investmentArea        String?   @map("investment_area") @db.VarChar(255)
+  businessValue         String?   @map("business_value") @db.Text
+  featureDetails        String?   @map("feature_details") @db.Text
+  enabledFor            String?   @map("enabled_for") @db.Text
+  earlyAccessDate       DateTime? @map("early_access_date") @db.Date
+  publicPreviewDate     DateTime? @map("public_preview_date") @db.Date
+  gaDate                DateTime? @map("ga_date") @db.Date
+  gaYearMonth           String?   @map("ga_year_month") @db.VarChar(7)
+  previewReleaseWave    String?   @map("preview_release_wave") @db.VarChar(100)
+  gaReleaseWave         String?   @map("ga_release_wave") @db.VarChar(100)
+  geographicAreas       Json?     @map("geographic_areas")
+  lastUpdated           DateTime  @default(now()) @updatedAt @map("last_updated")
+  createdAt             DateTime  @default(now()) @map("created_at")
+
+  @@index([productName], map: "idx_product")
+  @@index([gaDate], map: "idx_ga_date")
+  @@index([investmentArea], map: "idx_investment_area")
+  @@map("release_items")
+}
+
+model ContentPage {
+  id              Int       @id @default(autoincrement())
+  slug            String    @unique @db.VarChar(255)
+  title           String    @db.VarChar(255)
+  content         String?   @db.LongText
+  markdownContent String?   @map("markdown_content") @db.LongText
+  excerpt         String?   @db.Text
+  featuredImage   String?   @map("featured_image") @db.VarChar(500)
+  type            PageType  @default(PAGE)
+  status          PageStatus @default(DRAFT)
+  authorId        Int?      @map("author_id")
+  publishedAt     DateTime? @map("published_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  metaTitle       String?   @map("meta_title") @db.VarChar(255)
+  metaDescription String?   @map("meta_description") @db.Text
+
+  author User? @relation(fields: [authorId], references: [id])
+
+  @@index([slug], map: "idx_slug")
+  @@index([type, status], map: "idx_type_status")
+  @@index([publishedAt], map: "idx_published_at")
+  @@map("content_pages")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  email        String    @unique @db.VarChar(255)
+  passwordHash String    @map("password_hash") @db.VarChar(255)
+  name         String?   @db.VarChar(255)
+  role         UserRole  @default(EDITOR)
+  createdAt    DateTime  @default(now()) @map("created_at")
+  lastLogin    DateTime? @map("last_login")
+
+  pages ContentPage[]
+
+  @@map("users")
+}
+
+model Setting {
+  keyName   String   @id @map("key_name") @db.VarChar(100)
+  value     String?  @db.Text
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("settings")
+}
+
+model SyncLog {
+  id           Int       @id @default(autoincrement())
+  syncType     String    @map("sync_type") @db.VarChar(50)
+  itemsSynced  Int       @map("items_synced")
+  status       SyncStatus
+  errorMessage String?   @map("error_message") @db.Text
+  startedAt    DateTime  @map("started_at")
+  completedAt  DateTime  @default(now()) @map("completed_at")
+
+  @@map("sync_log")
+}
+
+enum PageType {
+  PAGE
+  POST
+}
+
+enum PageStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+
+enum SyncStatus {
+  SUCCESS
+  FAILED
+}
