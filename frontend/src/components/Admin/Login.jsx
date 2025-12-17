@@ -3,8 +3,6 @@ import { useAuth } from '../../hooks/useAuth';
 
 /**
  * Login component
- * TODO: Add form validation
- * TODO: Add error display
  */
 function Login() {
   const [email, setEmail] = useState('');

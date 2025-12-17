@@ -2,9 +2,6 @@ import { Link } from 'react-router-dom';
 
 /**
  * Home page component
- * TODO: Add hero section
- * TODO: Add featured releases
- * TODO: Add CTA buttons
  */
 function Home() {
   return (

@@ -4,22 +4,17 @@ import jwt from 'jsonwebtoken';
 import prisma from '../config/database.js';
 import config from '../config/index.js';
 import authMiddleware from '../middleware/auth.js';
+import { validateBody, schemas } from '../middleware/validation.js';
 
 const router = express.Router();
 
 /**
  * POST /api/auth/login
  * Authenticate user and return JWT token
- * TODO: Add request validation
  */
-router.post('/login', async (req, res, next) => {
+router.post('/login', validateBody(schemas.login), async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    
-    // TODO: Add validation middleware
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password are required' });
-    }
     
     // Find user
     const user = await prisma.user.findUnique({

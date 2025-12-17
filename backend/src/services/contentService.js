@@ -65,7 +65,7 @@ export async function getContentBySlug(slug) {
  * @returns {Promise<Object>} Created page
  */
 export async function createContentPage(data) {
-  // TODO: Add validation
+  // Validation is handled by route middleware
   return await prisma.contentPage.create({
     data,
     include: {
@@ -87,7 +87,7 @@ export async function createContentPage(data) {
  * @returns {Promise<Object>} Updated page
  */
 export async function updateContentPage(id, data) {
-  // TODO: Add validation
+  // Validation is handled by route middleware
   return await prisma.contentPage.update({
     where: { id },
     data,
