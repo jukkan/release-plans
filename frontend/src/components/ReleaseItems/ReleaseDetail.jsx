@@ -93,7 +93,7 @@ function ReleaseDetail({ release }) {
             {Array.isArray(release.geographicAreas) 
               ? release.geographicAreas.map((area, idx) => (
                   <span key={idx} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                    {typeof area === 'string' ? area : area.name || JSON.stringify(area)}
+                    {typeof area === 'string' ? area : (area.name || 'Unknown Area')}
                   </span>
                 ))
               : <p className="text-gray-700">{String(release.geographicAreas)}</p>

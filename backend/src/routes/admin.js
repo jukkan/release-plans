@@ -133,46 +133,4 @@ router.get('/sync-logs', authMiddleware, requireRole('ADMIN'), async (req, res, 
   }
 });
 
-/**
- * DELETE /api/admin/content/:id
- * Delete a content page
- * Requires ADMIN role
- */
-router.delete('/content/:id', authMiddleware, requireRole('ADMIN'), async (req, res, next) => {
-  try {
-    // TODO: Add auth middleware
-    const { id } = req.params;
-    const pageId = parseInt(id, 10);
-    
-    if (isNaN(pageId)) {
-      return res.status(400).json({ error: 'Invalid page ID' });
-    }
-    
-    await prisma.contentPage.delete({
-      where: { id: pageId }
-    });
-    res.status(204).send();
-  } catch (error) {
-    next(error);
-  }
-});
-
-/**
- * GET /api/admin/sync-logs
- * Get sync history
- * Requires ADMIN role
- */
-router.get('/sync-logs', authMiddleware, requireRole('ADMIN'), async (req, res, next) => {
-  try {
-    // TODO: Add auth middleware
-    const logs = await prisma.syncLog.findMany({
-      orderBy: { completedAt: 'desc' },
-      take: 50
-    });
-    res.json({ data: logs });
-  } catch (error) {
-    next(error);
-  }
-});
-
 export default router;
