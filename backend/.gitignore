@@ -16,3 +16,7 @@ build/
 
 # Prisma
 migrations/
+
+# Database files
+*.db
+*.db-journal
