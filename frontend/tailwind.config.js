@@ -22,5 +22,6 @@ export default {
       },
     },
   },
+  // Note: line-clamp utilities (e.g., line-clamp-2) are built-in since Tailwind CSS v3.3
   plugins: [],
 };
