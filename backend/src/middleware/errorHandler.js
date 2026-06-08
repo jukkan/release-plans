@@ -25,7 +25,7 @@ export default function errorHandler(err, req, res, next) {
     if (err.code === 'P2002') {
       return res.status(409).json({
         error: 'Duplicate entry',
-        message: `A record with this ${err.meta?.target?.join(', ')} already exists`
+        message: 'A record with this value already exists'
       });
     }
 
@@ -44,11 +44,18 @@ export default function errorHandler(err, req, res, next) {
     });
   }
 
+  // Validation errors
+  if (err.name === 'ValidationError') {
+    return res.status(400).json({
+      error: 'Validation error',
+      details: err.details,
+    });
+  }
+
   // JWT errors are handled in auth middleware
-  // Validation errors are handled in validation middleware
 
   // Default error response
-  const statusCode = err.statusCode || 500;
+  const statusCode = err.statusCode || err.status || 500;
   const message = err.message || 'Internal server error';
 
   res.status(statusCode).json({
